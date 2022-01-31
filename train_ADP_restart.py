@@ -18,8 +18,11 @@ def main():
     # hparams_path = "/project2/andrewferguson/Kirill/c2f_vae_final/ADP_logs_final/version_0/hparams.yaml"
     # ckpt_path = "/project2/andrewferguson/Kirill/c2f_vae_final/ADP_logs_final/version_0/checkpoints/N-Step-Checkpoint.ckpt"
 
-    hparams_path = "/project2/andrewferguson/Kirill/c2f_vae_final/ADP_logs_final/version_1/hparams.yaml"
-    ckpt_path = "/project2/andrewferguson/Kirill/c2f_vae_final/ADP_logs_final/version_1/checkpoints/N-Step-Checkpoint.ckpt"
+    # hparams_path = "/project2/andrewferguson/Kirill/c2f_vae_final/ADP_logs_final/version_1/hparams.yaml"
+    # ckpt_path = "/project2/andrewferguson/Kirill/c2f_vae_final/ADP_logs_final/version_1/checkpoints/N-Step-Checkpoint.ckpt"
+
+    hparams_path = "/project2/andrewferguson/Kirill/c2f_vae_final/ADP_logs_final/version_2/hparams.yaml"
+    ckpt_path = "/project2/andrewferguson/Kirill/c2f_vae_final/ADP_logs_final/version_2/checkpoints/N-Step-Checkpoint.ckpt"
 
     hparams = pl.core.saving.load_hparams_from_yaml(hparams_path)
     model = cVAE.load_from_checkpoint(ckpt_path, **hparams)

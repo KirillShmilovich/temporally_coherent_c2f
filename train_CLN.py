@@ -14,7 +14,7 @@ def main():
     model = cVAE(**hparams)
 
     args = Namespace(**hparams)
-    logger = pl.loggers.TensorBoardLogger("./", name="CLN_logs_final")
+    logger = pl.loggers.TensorBoardLogger("./", name="CLN_logs_final_v3")
     trainer = pl.Trainer.from_argparse_args(
         args,
         callbacks=[CheckpointEveryNSteps(2000)],
